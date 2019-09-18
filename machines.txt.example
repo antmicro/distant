@@ -1,0 +1,2 @@
+c2-standard-16 do_something.sh && cd some_dir && make_smth -j`nproc`
+c2-standard-8 do_something_else && test_smth.sh

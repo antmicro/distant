@@ -1,0 +1,6 @@
+config.ini
+machines.txt
+vm*
+__pycache__/*
+targets.txt
+local.txt
