@@ -16,7 +16,7 @@ After each task has finished, logs and performance graphs are accessible in the 
 
 The engine uses the `antmicro/ubuntu-build-tools` docker image, basically Ubuntu 18.04 with the following tools: `python3 python3-pip build-essential git cmake`
 
-The image can be changed in the `singlejob.py` file (pull and run commands).
+The image can be changed in the `singlejob.py` file (the `pull` and `run` commands).
 
 ## Additional tools
 
