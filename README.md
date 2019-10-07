@@ -22,4 +22,4 @@ The image can be changed in the `singlejob.py` file (the `pull` and `run` comman
 
 The `./ninjatree.py` tool can be useful while dividing tasks between the workers and the coordinator machine. 
 Usage: `./ninjatree.py <build_path> <start_target> <targets_list_file> <depth>`
-Provide thr `build_path` with the `build.ninja` file, the initial target, a list of targets that will be executed on workers machines and the tree search depth. The Ninjatree tool will search the build tree for those targets and it will output a complementary list of targets to be performed on coordinator machine to have a complete `<start_target>` execution.
+Provide the `build_path` with the `build.ninja` file, the initial target, a list of targets that will be executed on workers machines and the tree search depth. The Ninjatree tool will search the build tree for those targets and it will output a complementary list of targets to be performed on coordinator machine to have a complete `<start_target>` execution.
