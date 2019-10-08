@@ -40,19 +40,19 @@ def get_vm(i):
 
 
 def get_machines_def():
-    if os.path.exists(os.getcwd()+"/machines.txt"):
-        print("machines.txt found in PROJECT dir.")
-        return os.getcwd()+"/machines.txt"
+    if os.path.exists(os.getcwd()+"/machines.conf"):
+        print("machines.conf found in PROJECT dir.")
+        return os.getcwd()+"/machines.conf"
     else:
-        print("machines.txt not found, I'm confused...")
+        print("machines.conf not found, I'm confused...")
         sys.exit(1)
 
 def get_local_def():
-    if os.path.exists(os.getcwd()+"/local.txt"):
-        print("local..txt found in PROJECT dir.")
-        return os.getcwd()+"/local.txt"
+    if os.path.exists(os.getcwd()+"/local.conf"):
+        print("local.conf found in PROJECT dir.")
+        return os.getcwd()+"/local.conf"
     else:
-        print("local.txt not found, but there are remote jobs...")
+        print("local.conf not found, but there are remote jobs...")
         return None
 
 

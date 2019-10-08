@@ -52,7 +52,7 @@ chmod +x /usr/local/bin/docker-machine
 
 The machine is now ready to perform distributed builds/testing. It can be tested by using this simple example:
 
-Create project dir and inside create machines.txt file with worker definitions, like:
+Create project dir and inside create machines.conf file with worker definitions, like:
 
 ```
 n1-standard-4 echo worker1 here!

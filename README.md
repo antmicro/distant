@@ -8,9 +8,9 @@
 
 ## Usage
 
-1. In your project Create/edit a `machines.txt` file, there is an example file: `machines.txt.example` file which presents the syntax. This file contains worker machine types with commands to be executed on each worker. 
-2. (Optional) Create/edit a `local.txt` file. This file contains command(s) to be executed on the coordinator machine.
-2. The `coordinator.py` script executed from the build project directory starts the execution. It will look for `machines.txt` and `local.txt` files in the project directory.
+1. In your project Create/edit a `machines.conf` file, there is an example file: `machines.conf.example` file which presents the syntax. This file contains worker machine types with commands to be executed on each worker. 
+2. (Optional) Create/edit a `local.conf` file. This file contains command(s) to be executed on the coordinator machine.
+2. The `coordinator.py` script executed from the build project directory starts the execution. It will look for `machines.conf` and `local.conf` files in the project directory.
 
 After each task has finished, logs and performance graphs are accessible in the `vmoutput` subdirectory of `<project_dir>`.
 

@@ -6,7 +6,7 @@ import os
 import configparser
 from helper import *
 
-lineList = [line.rstrip('\n') for line in open('machines.txt')]
+lineList = [line.rstrip('\n') for line in open('machines.conf')]
 
 
 
