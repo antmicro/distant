@@ -4,6 +4,13 @@ import docker
 import sys
 from helper import *
 
+
+vm_name_pref=sys.argv[1]
+command=sys.argv[2]
+projdir=sys.argv[3]
+vmname=sys.argv[4]
+
+
 client = docker.from_env()
 print(gt()+"Started task "+sys.argv[2])
 #image = client.images.pull("antmicro/ubuntu-build-measure-tools:latest")
@@ -24,7 +31,7 @@ result = container.wait()
 exit_code = result["StatusCode"]
 
 
-with open(sys.argv[1]+".log","w") as logfile:
+with open(sys.argv[4]+".log","w") as logfile:
     print(container.logs().decode("utf-8"),file=logfile)
     logfile.close()
 print(gt()+"Finished task "+sys.argv[2]+" with exit code: "+str(exit_code))

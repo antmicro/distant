@@ -1,3 +1,4 @@
 [SETUP]
 VMPREFIX=vmtest
 TIMEOUT=500
+GCPPROJECT=distributed-build-tutorial

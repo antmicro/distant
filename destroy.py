@@ -3,9 +3,8 @@
 from helper import *
 import sys
 
-name = sys.argv[1]
-
-shell('./sargraph.py chart label \"'+name+' \"')
-shell("docker-machine mount -u "+name+":/tmp "+name)
-shell("docker-machine rm -f "+name)
+prefname = sys.argv[1]
+name = sys.argv[2]
+shell("docker-machine mount -u "+prefname+":/tmp "+name)
+shell("docker-machine rm -f "+prefname)
 shell("rm -rf "+name)

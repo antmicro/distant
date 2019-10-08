@@ -1,6 +1,8 @@
 import subprocess
 import time
 import datetime
+import random
+import string
 import configparser
 import os
 from shutil import copyfile
@@ -12,6 +14,9 @@ def shell(cmd):
 def gt():
     return '['+str(datetime.datetime.now())+'] '
 
+def random_str(strlength=20):
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(strlength))
 
 def get_script_dir():
     return os.path.dirname(os.path.realpath(__file__))

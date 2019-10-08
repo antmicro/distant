@@ -1,8 +1,15 @@
 #!/bin/bash
 
-eval $(docker-machine env --shell bash $2)
-real=`realpath $1`
 
-cp $4/all.tar $2/
-python3 $4/singlejob.py $2 "$3" $real
+PROJDIR=$1
+VM_NAME_PREF=$2
+COMMAND=$3
+SCRIPTDIR=$4
+VMNAME=$5
+
+eval $(docker-machine env --shell bash $VM_NAME_PREF)
+real=`realpath $PROJDIR`
+
+cp all.tar $VMNAME/
+python3 $SCRIPTDIR/singlejob.py $VM_NAME_PREF "$COMMAND" $real $VMNAME
 exit $?
