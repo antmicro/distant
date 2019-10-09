@@ -1,4 +1,4 @@
-# Distributed build engine
+# Distant - Antmicro's distributed build engine
 
 ## Prequisites
 
