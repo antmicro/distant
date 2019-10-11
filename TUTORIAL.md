@@ -47,7 +47,7 @@ chmod +x /usr/local/bin/docker-machine
 
 Add user to docker group: `sudo usermod -aG docker $USER` and relog so that your docker group membership becomes valid.
 
-4. Clone repository: `git clone https://github.com/antmicro/cloud-distributed-build.git && cd cloud-distributed-build`
+4. Clone repository: `git clone https://github.com/antmicro/distant.git && cd distant`
 5. Install requirements: `sudo apt-get install -y python3-pip && pip3 install -r requirements.txt`
 6. Copy `config.ini.example` to `config.ini` and review the settings.
 
