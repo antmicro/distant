@@ -1,18 +1,20 @@
 # Distant - Antmicro's distributed build engine
 
+Copyright (c) 2019-2021 [Antmicro](https://www.antmicro.com)
+
 ## Scenario
 
-Distant - distributed cloud build utilizes cloud virtual machines to spread build/test workloads. It assumes there is a preparation phase executed on the coordiantor machine (setting envs, executing common jobs), after which test/build execution can be distributed to worker machines.  
+Distant - distributed cloud build utilizes cloud virtual machines to spread build/test workloads. It assumes there is a preparation phase executed on the coordinator machine (setting envs, executing common jobs), after which test/build execution can be distributed to worker machines.
 
-## Prequisites
+## Prerequisites
 
 1. Coordinator machine in a GCP project, with permissions to start other virtual machines within a Compute Engine service.
-2. Python3 with modules described in `requirements.txt`
+2. Python 3 with modules described in `requirements.txt`
 3. `docker`, `docker-machine`, `sshfs`
 
 ## Usage
 
-1. In your project Create/edit a `machines.conf` file, there is an example file: `machines.conf.example` file which presents the syntax. This file contains worker machine types with commands to be executed on each worker. 
+1. In your project Create/edit a `machines.conf` file, there is an example file: `machines.conf.example` file which presents the syntax. This file contains worker machine types with commands to be executed on each worker.
 2. (Optional) Create/edit a `local.conf` file. This file contains command(s) to be executed on the coordinator machine.
 2. The `coordinator.py` script executed from the build project directory starts the execution. It will look for `machines.conf` and `local.conf` files in the project directory.
 
